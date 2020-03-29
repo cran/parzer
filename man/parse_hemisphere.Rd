@@ -28,6 +28,7 @@ length(lon) == length(lat)
 \examples{
 # NE
 parse_hemisphere("74.123E", "45N54.2356")
+\dontrun{
 # NW
 parse_hemisphere(-120, 40.4183318)
 # SW
@@ -45,4 +46,5 @@ pts <- rg_position(count = 1000)
 lons <- as.character(vapply(pts, "[[", 1, 1))
 lats <- as.character(vapply(pts, "[[", 1, 2))
 parse_hemisphere(lons, lats)
+}
 }

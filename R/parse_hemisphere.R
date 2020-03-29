@@ -15,6 +15,7 @@
 #' @examples
 #' # NE
 #' parse_hemisphere("74.123E", "45N54.2356")
+#' \dontrun{
 #' # NW
 #' parse_hemisphere(-120, 40.4183318)
 #' # SW
@@ -32,6 +33,7 @@
 #' lons <- as.character(vapply(pts, "[[", 1, 1))
 #' lats <- as.character(vapply(pts, "[[", 1, 2))
 #' parse_hemisphere(lons, lats)
+#' }
 parse_hemisphere <- function(lon, lat) {
   lint_inputs(lon, lat, "")
   stopifnot(length(lon) == length(lat))
