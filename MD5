@@ -1,7 +1,7 @@
-c4d6d8865e21afcc97566eee9cf6bd79 *DESCRIPTION
+3182c57d40c1d5bc73a361cae3e71684 *DESCRIPTION
 35bd8606c71dfbfad3ad27387e177ad4 *LICENSE
 38fb08423c14da6412917b4c223fa38e *NAMESPACE
-1496822d260eebcd8ddd25ab66c34a22 *NEWS.md
+d8b0b90af695daa47167b6e6e7396160 *NEWS.md
 b6d55dde1dbd6b5d860b22d3e72ef81c *R/RcppExports.R
 887eb3722017abf657e9784b9153cbf0 *R/dms-fxns.R
 d8d2932d8ba82df80cf3c66b1d065061 *R/parse_hemisphere.R
@@ -13,7 +13,7 @@ c0da724847b3626a8dc35c587e81be68 *R/parse_parts.R
 36cfb7af451af96aeba53c45a523c762 *R/parzer-package.R
 4e856d9f22288d564e60abad8d9009e9 *R/zzz.R
 4ba6f07c4ce039c115691328996665ee *README.md
-e0c6748e6740fc57683c71bee2388f29 *build/vignette.rds
+50fd961a9ef511ac1b8caf922777cbdf *build/vignette.rds
 006fb420cd9e59816724da242933f13e *inst/doc/parzer.Rmd
 9668c529dbf73732f6079da68c10f75e *inst/doc/parzer.html
 b0f657f8c3dcaafcee24e3089a265ac1 *inst/ignore/extract_coords.R
@@ -33,7 +33,7 @@ b52aefc06e3d38f471343951a66b1d29 *man/parzer-package.Rd
 93621ed1f5c8df4f2b45dabc60b5e7cd *src/parse.cpp
 7abb31b2b63820b73f152105dbc38e31 *src/pz_hemisphere.cpp
 62cb376668a6f817bf845af95082cf20 *src/pz_parse_parts.cpp
-bfe7b635ea8752576fc813b0277b355c *src/pz_split_llstr.cpp
+0d6b36255f8821059d8cdf608caa89b3 *src/pz_split_llstr.cpp
 1334939c26346de3344f5c01738a819c *tests/testthat.R
 c40ee7f9871689dc4bdc5f7897678d36 *tests/testthat/test-dms.R
 7549be1d84faf38d57d32b2d3d357f03 *tests/testthat/test-parse_hemisphere.R
