@@ -1,7 +1,7 @@
-3182c57d40c1d5bc73a361cae3e71684 *DESCRIPTION
-35bd8606c71dfbfad3ad27387e177ad4 *LICENSE
+d6d69154da56a3a040b9bdab1c77777a *DESCRIPTION
+e34152a5351f580b172ee7093ca84124 *LICENSE
 38fb08423c14da6412917b4c223fa38e *NAMESPACE
-d8b0b90af695daa47167b6e6e7396160 *NEWS.md
+dfcbe18f4dbbc59f3ebfa54656656865 *NEWS.md
 b6d55dde1dbd6b5d860b22d3e72ef81c *R/RcppExports.R
 887eb3722017abf657e9784b9153cbf0 *R/dms-fxns.R
 d8d2932d8ba82df80cf3c66b1d065061 *R/parse_hemisphere.R
@@ -11,11 +11,11 @@ d18a55777976bcb3845c73d86367d3ba *R/parse_lat_lon.R
 1851def5aec13536b5725c257fe551a4 *R/parse_lon.R
 c0da724847b3626a8dc35c587e81be68 *R/parse_parts.R
 36cfb7af451af96aeba53c45a523c762 *R/parzer-package.R
-4e856d9f22288d564e60abad8d9009e9 *R/zzz.R
+ff6cb1e2d73fc7c7b21240554f9561a5 *R/zzz.R
 4ba6f07c4ce039c115691328996665ee *README.md
-50fd961a9ef511ac1b8caf922777cbdf *build/vignette.rds
+4adb51829e2a5e946795181dff07f97a *build/vignette.rds
 006fb420cd9e59816724da242933f13e *inst/doc/parzer.Rmd
-9668c529dbf73732f6079da68c10f75e *inst/doc/parzer.html
+4360a3299e7c530e196330294792243f *inst/doc/parzer.html
 b0f657f8c3dcaafcee24e3089a265ac1 *inst/ignore/extract_coords.R
 931bd42b5d49e2d8d92292dae09b0ad0 *inst/ignore/parse_coords.R
 a8a34167b37ae20102bdb6865347bffc *man/dms.Rd
@@ -36,6 +36,7 @@ b52aefc06e3d38f471343951a66b1d29 *man/parzer-package.Rd
 0d6b36255f8821059d8cdf608caa89b3 *src/pz_split_llstr.cpp
 1334939c26346de3344f5c01738a819c *tests/testthat.R
 c40ee7f9871689dc4bdc5f7897678d36 *tests/testthat/test-dms.R
+6acdde5e84f200301b7350cffae11014 *tests/testthat/test-mbcs-locale.R
 7549be1d84faf38d57d32b2d3d357f03 *tests/testthat/test-parse_hemisphere.R
 3e80ced70f66a46ea3163f60372b4874 *tests/testthat/test-parse_lat.R
 fabed32c6342481d670f4f4addd739cc *tests/testthat/test-parse_lat_lon.R
@@ -43,6 +44,6 @@ cad3553a313c249359a58043dce35ec3 *tests/testthat/test-parse_llstr.R
 8b662753cf88670c1f83a23710416c4b *tests/testthat/test-parse_lon.R
 a266a51f7db0932ac44f0519879249cc *tests/testthat/test-parse_parts.R
 e8baacd915322234da09aa0203fd82a5 *tests/testthat/test-split_llstr.R
-2ebdd8a1b89b7fcff15fd98f90ae8374 *tests/testthat/test-utils.R
+db56d255d979c0db102f278d46c98f5d *tests/testthat/test-utils.R
 006fb420cd9e59816724da242933f13e *vignettes/parzer.Rmd
 4a632be4974a3e25d6316fe292aeb24c *vignettes/parzer.Rmd.og
