@@ -1,3 +1,15 @@
+parzer 0.4.1
+============
+
+### MINOR IMPROVEMENTS
+
+* documentation and package description describe more clearly `parzer` core objective of parsing messy coordinates in 
+character strings to convert them to decimal numeric values. Suggestion and work by @robitalec
+
+### ACKNOWLEDGEMENTS CHANGES
+* new contributors to the package: @robitalec, @maelle and @yutannihilation
+* new maintainer: @AlbanSagouis
+
 parzer 0.4.0
 ============
 
