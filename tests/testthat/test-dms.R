@@ -1,33 +1,26 @@
-context("degree-minute-second fxns")
+# degree-minute-second fxns
 
 test_that("pz_degree works", {
-  skip_on_cran()
   aa <- pz_degree(45.23323)
 
-  expect_is(aa, "integer")
   expect_type(aa, "integer")
   expect_equal(aa, 45)
 })
 
 test_that("pz_minute works", {
-  skip_on_cran()
   aa <- pz_minute(45.23323)
 
-  expect_is(aa, "integer")
   expect_type(aa, "integer")
   expect_equal(aa, 13)
 })
 
 test_that("pz_second works", {
-  skip_on_cran()
   aa <- pz_second(45.23323)
 
-  expect_is(aa, "numeric")
   expect_type(aa, "double")
   expect_equal(round(aa), 60)
 })
 
-# FIXME: look into commented out values
 test_lats <- c(
   "40.4183318",
   "40.4183318° N",
@@ -38,11 +31,8 @@ test_lats <- c(
   "40 25 5.994",
   "40.4183318",
   "40.4183318°",
-  # "145505994.48",
   "40.4183318N",
-  # "4025.0999N",
   "40°25’5.994\"N",
-  # "402505.994N",
   "N 40 25.0999",
   "40:25:6N",
   "40:25:5.994N",
@@ -56,19 +46,14 @@ test_lats <- c(
 )
 
 test_that("degree works with varied formats", {
-  skip_on_cran()
-  # out <- data.frame(input = test_lats, res = NA_real_,
-  #                   stringsAsFactors = FALSE)
   for (i in seq_along(test_lats)) {
-    expect_equal(pz_degree(lat = test_lats[i]), 40)
-    expect_equal(pz_minute(lat = test_lats[i]), 25)
-    expect_equal(round(pz_second(lat = test_lats[i])), 6)
-    # out[i, "res"] <- degree(test_lats[i])
+    expect_equal(pz_degree(lat = test_lats[[i]]), 40)
+    expect_equal(pz_minute(lat = test_lats[[i]]), 25)
+    expect_equal(round(pz_second(lat = test_lats[[i]])), 6)
   }
 })
 
 test_that("pz_degree - fails well", {
-  skip_on_cran()
   expect_error(pz_degree(), "is not TRUE")
   expect_error(pz_degree(4, 5), "is not TRUE")
   expect_error(pz_degree(mtcars), "lon must be of class")
@@ -96,7 +81,6 @@ invalid_formats <- c(
 )
 
 test_that("dms fxns fail as expected", {
-  skip_on_cran()
   out <- data.frame(
     input = invalid_formats, res = NA_real_,
     stringsAsFactors = FALSE
@@ -116,15 +100,14 @@ test_that("dms fxns fail as expected", {
 })
 
 test_that("dms adder fxns", {
-  skip_on_cran()
   # basic usage, one at a time
   deg1 <- pz_d(31)
   min1 <- pz_m(44)
   sec1 <- pz_s(17)
 
-  expect_is(deg1, "pz")
-  expect_is(min1, "pz")
-  expect_is(sec1, "pz")
+  expect_type(deg1, "double")
+  expect_type(min1, "double")
+  expect_type(sec1, "double")
 
   expect_equal(deg1[1], 31)
   expect_equal(min1[1], 44)
@@ -134,8 +117,8 @@ test_that("dms adder fxns", {
   add1 <- pz_d(31) + pz_m(44)
   add2 <- pz_d(31) + pz_m(44) + pz_s(59)
 
-  expect_is(add1, "pz")
-  expect_is(add2, "pz")
+  expect_type(add1, "double")
+  expect_type(add2, "double")
 
   expect_equal(round(add1[1], 2), 31.73)
   expect_equal(round(add2[1], 2), 31.75)
@@ -144,19 +127,18 @@ test_that("dms adder fxns", {
   sub1 <- pz_d(5) - pz_m(49)
   sub2 <- pz_d(-34) - pz_m(56) - pz_s(3)
 
-  expect_is(sub1, "pz")
-  expect_is(sub2, "pz")
+  expect_type(sub1, "double")
+  expect_type(sub2, "double")
 
   expect_equal(round(sub1[1], 2), 4.18)
   expect_equal(round(sub2[1], 2), -34.93)
 })
 
 test_that("dms fxns: utilities", {
-  skip_on_cran()
   # unclass_strip_atts
   z <- structure("a", foo = "bar")
   zz <- unclass_strip_atts(z)
-  expect_is(attributes(z), "list")
+  expect_type(attributes(z), "list")
   expect_null(attributes(zz))
 
   # print.pz

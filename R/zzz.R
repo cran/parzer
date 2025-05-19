@@ -10,19 +10,12 @@ assert <- function(x, y) {
 }
 
 lint_inputs <- function(lon = NULL, lat = NULL, format) {
-  assert(lon, c("character", "numeric", "integer"))
-  assert(lat, c("character", "numeric", "integer"))
+  assert(lon, "character")
+  assert(lat, "character")
   assert(format, "character")
 }
 
-# FIXME: stopgap for now until figure out how to replace these on on src side
-# - single quotes
-# - double quotes
-# - degree symbols
-# - masculine ordinal indicator
-# - rare separators
-
-scrub <- function(x) gsub("[^A-Za-z0-9\\.\\ ,'-]|d|g", "'", x)
+scrub <- function(x) trimws(gsub("[^A-Za-z0-9\\.\\ ,'-]|d|g", "'", x))
 
 stop_form <- function() stop("format handling not ready yet")
 
