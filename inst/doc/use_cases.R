@@ -10,6 +10,13 @@
 #| eval: true
 library(parzer)
 
+## -----------------------------------------------------------------------------
+#| label: has_spatial
+#| include: false
+# The sf and leaflet chunks only run when both suggested packages are installed
+has_spatial <- requireNamespace("sf", quietly = TRUE) &&
+  requireNamespace("leaflet", quietly = TRUE)
+
 
 ## -----------------------------------------------------------------------------
 #| label: lats_lons
@@ -49,54 +56,10 @@ dat$color <- c("blue", "yellow", "green", "red", "green", "yellow")
 dat
 
 
-## -----------------------------------------------------------------------------
-#| label: converting_dat_to_sf
-#| warning: false
-#| collapse: true
-datsf <- sf::st_as_sf(dat, coords = c("longitude", "latitude"))
-datsf
 
 
 ## -----------------------------------------------------------------------------
 #| label: map_center
 center_lon <- mean(dat$longitude)
 center_lat <- mean(dat$latitude)
-
-
-## ----out.with="100%"----------------------------------------------------------
-#| label: fig-leaflet_1
-#| warning: false
-#| collapse: true
-library("leaflet")
-leaflet() |>
-  addTiles() |>
-  addMarkers(data = datsf) |>
-  setView(center_lon, center_lat, zoom = 10)
-
-
-## -----------------------------------------------------------------------------
-#| label: fig-leaflet_2
-#| warning: false
-bbox <- c(
-  xmin = 25.42813, ymin = 46.39455,
-  xmax = 25.68769, ymax = 46.60346
-)
-leaflet() |>
-  addTiles() |>
-  addRectangles(bbox[["xmin"]], bbox[["ymin"]], bbox[["xmax"]], bbox[["ymax"]]) |>
-  setView(center_lon, center_lat, zoom = 10)
-
-
-## -----------------------------------------------------------------------------
-#| label: cropping_dat
-datsf_c <- sf::st_crop(datsf, bbox)
-
-
-## ----out.with="100%"----------------------------------------------------------
-#| label: fig-leaflet_3
-#| warning: false
-leaflet() |>
-  addTiles() |>
-  addMarkers(data = datsf_c) |>
-  setView(center_lon, center_lat, zoom = 10)
 
