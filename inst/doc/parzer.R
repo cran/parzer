@@ -22,7 +22,7 @@ parse_lat("40.123°")
 parse_lat("40.123N")
 parse_lat("N45 04.25764")
 
-# Invalid values -> NaN
+# Invalid values -> NA, with a warning
 parse_lat("191.89")
 
 # Many inputs
@@ -69,6 +69,20 @@ lat_lon_strings <- c(
 )
 
 parse_llstr(lat_lon_strings)
+
+
+## -----------------------------------------------------------------------------
+#| label: "llstr-order"
+#| collapse: true
+parse_llstr("W74.5, N45.5")
+parse_llstr("-74.5, 45.5", order = "lon_lat")
+
+
+## -----------------------------------------------------------------------------
+#| label: "format"
+#| collapse: true
+parse_lat(c("4530N", "512839N"), format = c("DDMMH", "DDMMSSH"))
+parse_llstr("512839N 0002741W", format = "DDMMSSH DDDMMSSH")
 
 
 ## -----------------------------------------------------------------------------
